@@ -1,4 +1,4 @@
-# Bluetooh RC Car
+# Bluetooth RC Car
 
 This project is about remote controlling an arduino car.
 The repository consists of the source code used to control the car using the Arduino Car mobile application.
