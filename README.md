@@ -19,3 +19,7 @@ https://user-images.githubusercontent.com/62119636/198148668-3684f6eb-1604-405b-
 
 We are following the Google C++ Style Guide: 
 https://google.github.io/styleguide/cppguide.html
+
+# Authors
+* Kaylo Leon
+* Michael Martinez
