@@ -13,5 +13,5 @@ The car is currently able to move it's left and right wheel, as well as move for
 
 https://user-images.githubusercontent.com/62119636/198148668-3684f6eb-1604-405b-8acd-d4f0d959270a.mp4
 
-We are following the Google C++ Style Guide
+We are following the Google C++ Style Guide: 
 https://google.github.io/styleguide/cppguide.html
