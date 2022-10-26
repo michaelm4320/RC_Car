@@ -1,6 +1,6 @@
 # Bluetooth RC Car
 
-This project is about remote controlling an arduino car.
+This project is about remote controlling an arduino car for CNT 4104 (Software Proj Comp Networks) at Florida Gulf Coast University.
 The repository consists of the source code used to control the car using the Arduino Car mobile application.
 
 Here is a picture of the Arduino Car. 
