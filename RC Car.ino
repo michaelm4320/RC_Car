@@ -2,12 +2,12 @@ char appInput;              //initializes char to be assigned
 
 void setup() {
  int leftMotorForward = 4; //left motors forward
- int leftMotorReverses = 5; //left motors reverse
+ int leftMotorReverse = 5; //left motors reverse
  int rightMotorForward = 6; //right motors forward
  int rightMotorReverse = 7; //right motors reverse
  
  pinMode(leftMotorForward,OUTPUT);   
- pinMode(leftMotorReverses,OUTPUT);   
+ pinMode(leftMotorReverse,OUTPUT);   
  pinMode(rightMotorForward,OUTPUT);   
  pinMode(rightMotorReverse,OUTPUT);   
  Serial.begin(9600);  //opens serial port at data rate
@@ -39,7 +39,7 @@ else if(appInput == 'R'){      //left motor turned on, turns right
  
 else if(appInput == 'S'){      //STOP, all motors off when no other input detected
   digitalWrite(leftMotorForward,LOW);
-  digitalWrite(leftMotorReverses,LOW);
+  digitalWrite(leftMotorReverse,LOW);
   digitalWrite(rightMotorForward,LOW);
   digitalWrite(rightMotorReverse,LOW);
 }
