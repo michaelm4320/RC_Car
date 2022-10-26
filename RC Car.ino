@@ -1,42 +1,38 @@
-char t;
+char t;              //initializes char to be assigned
  
 void setup() {
 pinMode(4,OUTPUT);   //left motors forward
 pinMode(5,OUTPUT);   //left motors reverse
 pinMode(6,OUTPUT);   //right motors forward
 pinMode(7,OUTPUT);   //right motors reverse
-Serial.begin(9600);
+Serial.begin(9600);  //opens serial port at data rate
 }
  
-void loop() {
+void loop() {            //loops through 'if' statements to look for input
 if(Serial.available()){
-  t = Serial.read();
+  t = Serial.read();     //assigns char value from bluetooth app
   Serial.println(t);
 }
  
-if(t == 'F'){            //move forward(all motors rotate in forward direction)
+if(t == 'F'){            //turns on pins to rotate wheels forward
   digitalWrite(4,HIGH);
   digitalWrite(6,HIGH);
 }
  
-else if(t == 'B'){      //move reverse (all motors rotate in reverse direction)
+else if(t == 'B'){      //turns on pins to rotate wheels backwards
   digitalWrite(5,HIGH);
   digitalWrite(7,HIGH);
 }
  
-else if(t == 'L'){      //turn right (left side motors rotate in forward direction, right side motors doesn't rotate)
+else if(t == 'L'){      //right motor turned on, turns left
   digitalWrite(6,HIGH);
 }
  
-else if(t == 'R'){      //turn left (right side motors rotate in forward direction, left side motors doesn't rotate)
+else if(t == 'R'){      //left motor turned on, turns right
   digitalWrite(4,HIGH);
 }
-
-else if(t == 'W'){    //turn led on or off)
-  digitalWrite(9,HIGH);
-}
  
-else if(t == 'S'){      //STOP (all motors stop)
+else if(t == 'S'){      //STOP, all motors off when no other input detected
   digitalWrite(4,LOW);
   digitalWrite(5,LOW);
   digitalWrite(6,LOW);
