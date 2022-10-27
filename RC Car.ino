@@ -1,11 +1,11 @@
 char appInput;              // initializes char to be assigned
 
-void setup() {
- int leftMotorForward = 4; // left motors forward
- int leftMotorReverse = 5; // left motors reverse
+ int leftMotorForward = 4;  // left motors forward
+ int leftMotorReverse = 5;  // left motors reverse
  int rightMotorForward = 6; // right motors forward
  int rightMotorReverse = 7; // right motors reverse
- 
+
+void setup() {
  pinMode(leftMotorForward,OUTPUT);   
  pinMode(leftMotorReverse,OUTPUT);   
  pinMode(rightMotorForward,OUTPUT);   
@@ -25,7 +25,7 @@ if(appInput == 'F'){            // turns on pins to rotate wheels forward
 }
  
 else if(appInput == 'B'){      // turns on pins to rotate wheels backwards
-  digitalWrite(leftMotorReverses,HIGH);
+  digitalWrite(leftMotorReverse,HIGH);
   digitalWrite(rightMotorReverse,HIGH);
 }
  
