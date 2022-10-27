@@ -37,6 +37,11 @@ else if(appInput == 'R'){      // left motor turned on, turns right
   digitalWrite(leftMotorForward,HIGH);
 }
  
+else if(appInput == 'X') {          // turn right motors on, doing a donut to the left
+  digitalWrite(rightMotorForward,HIGH);
+  delay(3000);
+}
+
 // STOP, all motors off when no other input detected 
 else if(appInput == 'S'){  
   digitalWrite(leftMotorForward,LOW);
