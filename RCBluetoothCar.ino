@@ -1,7 +1,7 @@
-#define echoPin 9 // attach pin D2 Arduino to pin Echo of HC-SR04
-#define trigPin 8
+#define echoPin 9 	// attach pin D9 Arduino to pin Echo of HC-SR04
+#define trigPin 8	// attach pin D8 Arduino to pin Echo of HC-SR04
 
-char appInput;              // initializes char to be assigned
+char appInput;         	// initializes char to be assigned
 
 int leftMotorForward = 5;  // left motors forward
 int leftMotorReverse = 4;  // left motors reverse
@@ -17,8 +17,8 @@ void setup() {
 	pinMode(rightMotorForward, OUTPUT);
 	pinMode(rightMotorReverse, OUTPUT);
 
-  pinMode(trigPin, OUTPUT);
-  pinMode(echoPin, INPUT);
+  	pinMode(trigPin, OUTPUT);
+  	pinMode(echoPin, INPUT);
 
 	Serial.begin(9600);  // opens serial port at data rate
 }
@@ -61,19 +61,21 @@ void loop() {            // loops through 'if' statements to look for input
 	}
 
 delay(100);
-	  // Clears the trigPin condition
-  digitalWrite(trigPin, LOW);
-  delayMicroseconds(2);
-  // Sets the trigPin HIGH (ACTIVE) for 10 microseconds
-  digitalWrite(trigPin, HIGH);
-  delayMicroseconds(10);
-  digitalWrite(trigPin, LOW);
-  // Reads the echoPin, returns the sound wave travel time in microseconds
-  duration = pulseIn(echoPin, HIGH);
-  // Calculating the distance
-  distance = duration * 0.034 / 2; // Speed of sound wave divided by 2 (go and back)
-  // Displays the distance on the Serial Monitor
-  Serial.print("Distance: ");
-  Serial.print(distance);
-  Serial.println(" cm");
+	
+	// Clears the trigPin condition
+  	digitalWrite(trigPin, LOW);
+  	delayMicroseconds(2);
+  	// Sets the trigPin HIGH (ACTIVE) for 10 microseconds
+ 	digitalWrite(trigPin, HIGH);
+ 	delayMicroseconds(10);
+  	digitalWrite(trigPin, LOW);
+  	// Reads the echoPin, returns the sound wave travel time in microseconds
+  	duration = pulseIn(echoPin, HIGH);
+  	// Calculating the distance
+  	distance = duration * 0.034 / 2; // Speed of sound wave divided by 2 (go and back)
+  	// Displays the distance on the Serial Monitor
+  	Serial.print("Distance: ");
+  	Serial.print(distance);
+  	Serial.println(" cm");
+	
 }
