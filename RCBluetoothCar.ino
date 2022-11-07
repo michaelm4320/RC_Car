@@ -1,9 +1,9 @@
 char appInput;              // initializes char to be assigned
 
- int leftMotorForward = 4;  // left motors forward
- int leftMotorReverse = 5;  // left motors reverse
- int rightMotorForward = 6; // right motors forward
- int rightMotorReverse = 7; // right motors reverse
+int leftMotorForward = 4;  // left motors forward
+int leftMotorReverse = 5;  // left motors reverse
+int rightMotorForward = 6; // right motors forward
+int rightMotorReverse = 7; // right motors reverse
 
 void setup() {
  pinMode(leftMotorForward,OUTPUT);   
