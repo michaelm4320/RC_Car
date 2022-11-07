@@ -60,7 +60,7 @@ void loop() {            // loops through 'if' statements to look for input
 		digitalWrite(rightMotorReverse, LOW);
 	}
 
-delay(100);
+	delay(100);
 	
 	// Clears the trigPin condition
   	digitalWrite(trigPin, LOW);
