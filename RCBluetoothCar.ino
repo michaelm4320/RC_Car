@@ -17,51 +17,44 @@ void setup() {
 	pinMode(rightMotorForward, OUTPUT);
 	pinMode(rightMotorReverse, OUTPUT);
 
-  	pinMode(trigPin, OUTPUT);
+  	pinMode(trigPin, OUTPUT);	
   	pinMode(echoPin, INPUT);
 
 	Serial.begin(9600);  // opens serial port at data rate
 }
 
-void loop() {            // loops through 'if' statements to look for input
-	if (Serial.available()) {
-		appInput = Serial.read();     // assigns char value from bluetooth app
-		Serial.println(appInput);
-	}
 
-	if (appInput == 'F') {            // turns on pins to rotate wheels forward
-		digitalWrite(leftMotorForward, HIGH);
-		digitalWrite(rightMotorForward, HIGH);
-	}
+void forwards() {      // turns on pins to rotate wheels forward
+  	digitalWrite(leftMotorForward, HIGH);
+	digitalWrite(rightMotorForward, HIGH);
+}
 
-	else if (appInput == 'B') {      // turns on pins to rotate wheels backwards
-		digitalWrite(leftMotorReverse, HIGH);
-		digitalWrite(rightMotorReverse, HIGH);
-	}
+void backwards() {    // turns on pins to rotate wheels backwards
+  	digitalWrite(leftMotorReverse, HIGH);
+	digitalWrite(rightMotorReverse, HIGH);
+} 
 
-	else if (appInput == 'L') {      // right motor turned on, turns left
-		digitalWrite(rightMotorForward, HIGH);
-	}
+void left() {         // right motor turned on, turns left
+  	digitalWrite(rightMotorForward, HIGH);
+}
 
-	else if (appInput == 'R') {      // left motor turned on, turns right
-		digitalWrite(leftMotorForward, HIGH);
-	}
+void right() {        // left motor turned on, turns right
+	digitalWrite(leftMotorForward, HIGH);
+}
 
-	else if (appInput == 'X') {          // turn right motors on, doing a donut to the left
-		digitalWrite(rightMotorForward, HIGH);
-		//delay(3000);
-	}
+void stop() {         // STOP, all motors off when no other input detected 
+	digitalWrite(leftMotorForward, LOW);
+	digitalWrite(leftMotorReverse, LOW);
+	digitalWrite(rightMotorForward, LOW);
+	digitalWrite(rightMotorReverse, LOW);
+}
 
-	// STOP, all motors off when no other input detected 
-	else if (appInput == 'S') {
-		digitalWrite(leftMotorForward, LOW);
-		digitalWrite(leftMotorReverse, LOW);
-		digitalWrite(rightMotorForward, LOW);
-		digitalWrite(rightMotorReverse, LOW);
-	}
+void donut() {        // turn right motors on, doing a donut to the left        
+	digitalWrite(rightMotorForward, HIGH);
+	//delay(3000);
+}
 
-	delay(100);
-	
+int getDistance() {
 	// Clears the trigPin condition
   	digitalWrite(trigPin, LOW);
   	delayMicroseconds(2);
@@ -74,8 +67,58 @@ void loop() {            // loops through 'if' statements to look for input
   	// Calculating the distance
   	distance = duration * 0.034 / 2; // Speed of sound wave divided by 2 (go and back)
   	// Displays the distance on the Serial Monitor
-  	Serial.print("Distance: ");
+  	Serial.print("Dist: ");
   	Serial.print(distance);
   	Serial.println(" cm");
+	
+	return distance;
+}
+
+void avoid(int distance) {
+	stop();
+  	while (distance <= 30) {             	// backs up until distance is at least 40 cm
+    		backwards();
+  	}
+	right();
+  	delay(100); 
+}
+
+void loop() {                       		// loops through 'if' statements to look for input
+	if (Serial.available()) {
+		appInput = Serial.read(); 	// assigns char value from bluetooth app
+		Serial.println(appInput);
+	}
+
+	distance = getDistance();         	// prints out and assigns detected distance
+
+  	if (distance <= 13) {             	// once distance is too small, avoid funtion is run
+    		avoid(distance);
+  	}
+
+	if (appInput == 'F') {           
+    		forwards();
+	}
+
+	else if (appInput == 'B') {      
+		backwards();
+	}
+
+	else if (appInput == 'L') {      
+		left();
+	}
+
+	else if (appInput == 'R') {     
+		right();
+	}
+
+	else if (appInput == 'X') {
+		donut();
+	}
+
+	else if (appInput == 'S') {
+		stop();
+	}
+
+	delay(100);
 	
 }
