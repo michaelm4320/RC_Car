@@ -48,8 +48,6 @@ void left() { // right motor turned on, turns left
 	digitalWrite(leftMotorReverse, LOW);
 }
 
-
-
 void right() { // left motor turned on, turns right
 
 	digitalWrite(leftMotorForward, HIGH);
@@ -86,9 +84,8 @@ int getDistance() {
 	// Calculating the distance
 	distance = duration * 0.034 / 2; // Speed of sound wave divided by 2 (go and back)
 	// Displays the distance on the Serial Monitor
-	Serial.print("Dist: ");
+	Serial.print(" Distance: ");
 	Serial.print(distance);
-	Serial.println(" cm");
 
 	return distance;
 }
