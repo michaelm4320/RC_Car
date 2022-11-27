@@ -19,9 +19,9 @@ void setup() {
 
 	pinMode(trigPin, OUTPUT);
 	pinMode(echoPin, INPUT);
-	
+
 	// opens serial port at data rate
-	Serial.begin(9600);  
+	Serial.begin(9600);
 }
 
 
@@ -48,6 +48,8 @@ void left() { // right motor turned on, turns left
 	digitalWrite(leftMotorReverse, LOW);
 }
 
+
+
 void right() { // left motor turned on, turns right
 
 	digitalWrite(leftMotorForward, HIGH);
@@ -64,11 +66,9 @@ void stop() {  // STOP, all motors off when no other input detected
 }
 
 void donut() { // turn right motors on, doing a donut to the left        
-	digitalWrite(rightMotorForward, HIGH);
-	digitalWrite(leftMotorForward, LOW);
-	digitalWrite(rightMotorReverse, LOW);
-	digitalWrite(leftMotorReverse, LOW);
+	left();
 	delay(3000);
+	stop();
 }
 
 int getDistance() {
@@ -94,7 +94,7 @@ void avoid(int distance) {
 	stop();
 	delay(100);
 	// backs up until distance is at least 35 cm
-	while (getDistance() <= 35) {  
+	while (getDistance() <= 35) {
 		backwards();
 		delay(500);
 	}
@@ -105,18 +105,18 @@ void avoid(int distance) {
 }
 
 // loops through 'if' statements to look for input
-void loop() {                       		
+void loop() {
 	if (Serial.available()) {
 		// assigns char value from bluetooth app
-		appInput = Serial.read(); 	
+		appInput = Serial.read();
 		Serial.println(appInput);
 	}
-	
+
 	// prints out and assigns detected distance
-	distance = getDistance(); 
-	
+	distance = getDistance();
+
 	// once distance is too small, avoid funtion is run
-	if (distance <= 20) { 
+	if (distance <= 20) {
 		avoid(distance);
 	}
 
