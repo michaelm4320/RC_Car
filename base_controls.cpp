@@ -2,7 +2,6 @@
 #include <Arduino.h>
 
 void base_controls::forwards() { // turns on pins to rotate wheels forward
-
 	digitalWrite(leftMotorForward, HIGH);
 	digitalWrite(rightMotorForward, HIGH);
 	digitalWrite(leftMotorReverse, LOW);
@@ -10,7 +9,6 @@ void base_controls::forwards() { // turns on pins to rotate wheels forward
 }
 
 void base_controls::backwards() { // turns on pins to rotate wheels backwards
-
 	digitalWrite(leftMotorReverse, HIGH);
 	digitalWrite(rightMotorReverse, HIGH);
 	digitalWrite(leftMotorForward, LOW);
