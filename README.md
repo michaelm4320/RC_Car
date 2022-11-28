@@ -11,9 +11,18 @@ Here is a picture of the Arduino Car.
 
 The car consists of an arduino board, bluetooth module, and a arduino motor kit which includes the sensor shield, ultrasonic sensor, wheels, driver module, and motors. It runs on six AA batteries.
 
-The car is currently able to move it's left and right wheel, as well as move forward by rotating both wheels.
+The car is able to move it's left and right wheel, as well as move forward and backward by rotating both wheels.
 
-https://user-images.githubusercontent.com/62119636/198148668-3684f6eb-1604-405b-8acd-d4f0d959270a.mp4
+https://user-images.githubusercontent.com/62119636/204168174-5d58cbab-33c6-49e0-bb43-d79cb2b94981.mp4
+
+Here is the car doing a donut maneuver.
+
+https://user-images.githubusercontent.com/62119636/204168228-c900ff41-a602-4ffe-be4a-ca3afef37cf7.mp4
+
+The car is also able to detect objects in order to avoid obstacles.
+
+https://user-images.githubusercontent.com/62119636/204168260-ed2272c6-61da-4540-b22c-2b98cad5595e.mp4
+
 
 # Style Guide 
 
