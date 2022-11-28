@@ -42,7 +42,7 @@ void base_controls::stop() {  // STOP, all motors off when no other input detect
 void base_controls::donut() { // turn right motors on, doing a donut to the left        
 	left();
 	delay(3000);
-  stop();
+  	stop();
 }
 
 int base_controls::getDistance() { // calculates distance using sensor
