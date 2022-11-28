@@ -9,10 +9,7 @@ public:
   int echoPin;           // pin Echo of HC-SR04
   int trigPin;           // pin Trig of HC-SR04
 
-  // long duration;         // duration of soundwave travel 
-  // int distance;          // calculated distance
-
-	virtual void forwards(){};
+  virtual void forwards(){};
   virtual void backwards(){};
   virtual void left(){};
   virtual void right(){};
