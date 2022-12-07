@@ -9,7 +9,9 @@ Here is a picture of the Arduino Car.
 
 # Components
 
-The car consists of an arduino board, bluetooth module, and a arduino motor kit which includes the sensor shield, ultrasonic sensor, wheels, driver module, and motors. It runs on six AA batteries.
+The car consists of an arduino board, bluetooth module, and a arduino motor kit which includes the sensor shield, ultrasonic sensor, wheels, driver module, and motors. It runs on six AA batteries
+
+![Schematic](https://user-images.githubusercontent.com/62119636/206289630-d8553d0d-cad6-47a0-9ba1-59624b0d347a.png)
 
 The car is able to move it's left and right wheel, as well as move forward and backward by rotating both wheels.
 
