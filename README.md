@@ -20,6 +20,13 @@ Distance is displayed on the right-side of the app in centimeters.
 
 ![Controller App](https://user-images.githubusercontent.com/69911814/206289906-dff651ac-b455-4e85-935d-80fd0c16452f.jpg)
 
+## Code
+
+Basic movements would toggle pins accordingly. Both wheels spinning for forwards and back or one side for turning functions.
+Distance is calculated by a formula that uses the duration of the sound wave to reach an object and come back.
+With this distance, we were able to get our car to detect a nearby obstacle and back up before hitting it. The car then turns to move out of collision with the object.
+We used a lot of delays in our code to make sure the hardware and software moved correctly.
+
 
 ## Basic Movements
 The car is able to move it's left and right wheel, as well as move forward and backward by rotating both wheels.
