@@ -14,6 +14,10 @@ The car consists of an arduino board, bluetooth module, and a arduino motor kit 
 ![Schematic](https://user-images.githubusercontent.com/62119636/206289630-d8553d0d-cad6-47a0-9ba1-59624b0d347a.png)
 
 ## Controller Application Used
+The D-Pad buttons on the left handle the basic forward, backward, left, and right movements. The "X" button on the app performs the
+donut funtion.
+Distance is displayed on the right-side of the app in centimeters.
+
 ![Controller App](https://user-images.githubusercontent.com/69911814/206289906-dff651ac-b455-4e85-935d-80fd0c16452f.jpg)
 
 
