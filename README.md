@@ -13,6 +13,9 @@ The car consists of an arduino board, bluetooth module, and a arduino motor kit 
 
 ![Schematic](https://user-images.githubusercontent.com/62119636/206289630-d8553d0d-cad6-47a0-9ba1-59624b0d347a.png)
 
+![Controller App](https://user-images.githubusercontent.com/69911814/206289906-dff651ac-b455-4e85-935d-80fd0c16452f.jpg)
+
+
 The car is able to move it's left and right wheel, as well as move forward and backward by rotating both wheels.
 
 https://user-images.githubusercontent.com/62119636/204168174-5d58cbab-33c6-49e0-bb43-d79cb2b94981.mp4
