@@ -17,13 +17,17 @@ The car consists of an arduino board, bluetooth module, and a arduino motor kit 
 ![Controller App](https://user-images.githubusercontent.com/69911814/206289906-dff651ac-b455-4e85-935d-80fd0c16452f.jpg)
 
 
+# Basic Movements
 The car is able to move it's left and right wheel, as well as move forward and backward by rotating both wheels.
 
 https://user-images.githubusercontent.com/62119636/204168174-5d58cbab-33c6-49e0-bb43-d79cb2b94981.mp4
 
+# Donut Maneuver
 Here is the car doing a donut maneuver.
 
 https://user-images.githubusercontent.com/62119636/204168228-c900ff41-a602-4ffe-be4a-ca3afef37cf7.mp4
+
+# Object Detection
 
 The car is also able to detect objects in order to avoid obstacles.
 
